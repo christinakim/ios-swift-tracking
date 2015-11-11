@@ -65,4 +65,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         return nil
     }
+    
+    func startMonitoring(sender: AnyObject) {
+        // setting loc
+        var latitude:CLLocationDegrees = 37.039278
+        var longitude: CLLocationDegrees = -122
+        var center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        var radius: CLLocationDistance = CLLocationDistance(1.0)
+        var identifier: String = "vicmic"
+        
+        var geoRegion:CLCircularRegion = CLCircularRegion(center: center, radius: radius, identifier: identifier)
+        
+    }
 }

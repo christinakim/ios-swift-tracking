@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,33 +15,46 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZeN-65-sSu">
-                                <rect key="frame" x="54" y="20" width="330" height="477"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqv-Ko-fEd">
+                                <rect key="frame" x="104" y="641" width="206" height="79"/>
                                 <animations/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqv-Ko-fEd">
-                                <rect key="frame" x="116" y="489" width="206" height="103"/>
-                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="QbT-Mc-0O7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZeN-65-sSu">
+                                <rect key="frame" x="42" y="43" width="330" height="563"/>
+                                <animations/>
+                            </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mqv-Ko-fEd" firstAttribute="centerX" secondItem="ZeN-65-sSu" secondAttribute="centerX" id="28w-aU-q9r"/>
+                            <constraint firstItem="Mqv-Ko-fEd" firstAttribute="top" secondItem="ZeN-65-sSu" secondAttribute="bottom" constant="35" id="JHr-F1-3kC"/>
+                            <constraint firstItem="ZeN-65-sSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UB2-9t-zPC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mqv-Ko-fEd" secondAttribute="bottom" constant="16" id="WRG-Fi-age"/>
+                            <constraint firstItem="ZeN-65-sSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="ap9-jA-B0X"/>
+                            <constraint firstItem="Mqv-Ko-fEd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="glG-Iv-FEC"/>
+                            <constraint firstItem="ZeN-65-sSu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="i51-kq-lds"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="map" destination="ZeN-65-sSu" id="OMq-mt-qsd"/>
+                        <outlet property="map" destination="ZeN-65-sSu" id="e3H-6G-KCD"/>
                         <outlet property="mapLabel" destination="Mqv-Ko-fEd" id="OeB-GC-s6p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="373"/>
+            <point key="canvasLocation" x="-525" y="197"/>
         </scene>
     </scenes>
 </document>

@@ -34,9 +34,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         map.showsUserLocation = true
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         mapLabel.text = "\(locations[0])"
-        myLocations.append(locations[0] as CLLocation)
+        myLocations.append(locations[0])
         
         let spanX = 0.007
         let spanY = 0.007
@@ -66,4 +66,3 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return nil
     }
 }
-
